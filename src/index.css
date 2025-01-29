@@ -22,6 +22,7 @@ body{
 img{
     max-width: 100%;
 }
+
 /*********
 HEADER
 *********/
@@ -47,4 +48,66 @@ header{
 
 header img{
     width: 50px;
+}
+
+/*********
+MAIN
+*********/
+.first-section{
+    color: white;
+    background-color: #1c1c1c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.second-section{
+    padding: 30px 0px;
+    background-color: #0282f9 ;
+}
+
+.second-section img{
+    width: 40px;
+}
+
+.second-section a{
+    text-decoration: none;
+    color: white;
+}
+
+.second-section div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.third-section{
+    background-image: url('./img/footer-bg.jpg');
+    background-size: cover;
+}
+
+.third-section h2{
+    color: white;
+} 
+
+.third-section div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.third-section a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+.third-section ul{
+    list-style: none;
+}
+
+.row{
+    max-width: 200px;
+    height: 70vh;
+    display: flex;
 }
