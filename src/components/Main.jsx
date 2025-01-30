@@ -1,4 +1,38 @@
 const content = '--> content goes here <--';
+const secondSectionLink = [
+    {
+        id: 1,
+        text: 'DIGITAL COMICS',
+        src: "./img/buy-comics-digital-comics.png",
+        url:'#',
+    },
+    {
+        id: 2,
+        text: 'DC MERCHANDISE',
+        src: './img/buy-comics-merchandise.png',
+        url:'#',
+    },
+    {
+        id: 3,
+        text: 'SUBSCRIPTION',
+        src: './img/buy-comics-subscriptions.png',
+        url:'#',
+    },
+    {
+        id: 4,
+        text: 'COMIC SHOP LOCATOR',
+        src: './img/buy-comics-shop-locator.png',
+        url:'#',
+    },
+    {
+        id: 5,
+        text: 'DC POWER VISA',
+        src: './img/buy-dc-power-visa.svg',
+        url:'#',
+    }
+]
+
+import mainMenù from "../data/mainMenù";
 
 export default function Main(){
     return <main>
@@ -9,120 +43,43 @@ export default function Main(){
         </section>
         <section className="second-section">
             <div className="container">
-                <div className="col">
-                    <img src="./img/buy-comics-digital-comics.png" alt="icon1" />
-                    <a href="#">DIGITAL COMICS</a>
-                </div>
-                <div className="col">
-                    <img src="./img/buy-comics-merchandise.png" alt="icon2" />
-                    <a href="#">DC MERCHANDISE</a>
-                </div>
-                <div className="col">
-                    <img src="./img/buy-comics-subscriptions.png" alt="icon3" />
-                    <a href="#">SUBSCRIPTION</a>
-                </div>
-                <div className="col">
-                    <img src="./img/buy-comics-shop-locator.png" alt="icon4" />
-                    <a href="#">COMIC SHOP LOCATOR</a>
-                </div>
-                <div className="col">
-                    <img src="./img/buy-dc-power-visa.svg" alt="icon5" />
-                    <a href="#">DC POWER VISA</a>
-                </div>
+                {
+                    secondSectionLink.map((link) =>{
+                        return(
+                            <div className="col">
+                                <img src={link.src} alt="" />
+                                <a href={link.url}>{link.text}</a>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </section>
         <section className="third-section">
             <div className="container row">
-                <div className="col">
-                    <h3>DC COMICS</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Characters</a>
-                        </li>
-                        <li>
-                            <a href="#">Comics</a>
-                        </li>
-                        <li>
-                            <a href="#">Movies</a>
-                        </li>
-                        <li>
-                            <a href="#">TV</a>
-                        </li>
-                        <li>
-                            <a href="#">Games</a>
-                        </li>
-                        <li>
-                            <a href="#">Videos</a>
-                        </li>
-                    </ul>
-                    <h3>SHOP</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Shop DC</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop DC Collectibles</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h3>DC</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Terms of use</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Add Choices</a>
-                        </li>
-                        <li>
-                            <a href="#">Advertiding</a>
-                        </li>
-                        <li>
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="#">Subscriptions</a>
-                        </li>
-                        <li>
-                            <a href="#">Talent Workshops</a>
-                        </li>
-                        <li>
-                            <a href="#">Ratings</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop Help</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h3>Sites</h3>
-                    <ul>
-                        <li>
-                            <a href="#">DC</a>
-                        </li>
-                        <li>
-                            <a href="#">MAD Magazine</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Kids</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Universe</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Power Visa</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="row">
-                    <img src="./img/dc-logo-bg.png" alt="" />
-                </div>
+                {
+                    mainMenù.map((mainCol)=>{
+                        return(
+                            <div className="col" key={mainCol.id}>
+                                <h3>{mainCol.title}</h3>
+                                <ul>
+                                    {
+                                        mainCol.links.map((link) =>{
+                                            return(
+                                                <li key={link.id}>
+                                                    <a href={link.url}>{link.text}</a>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className="row">
+                <img src="./img/dc-logo-bg.png" alt="" />
             </div>
         </section>
     </main>

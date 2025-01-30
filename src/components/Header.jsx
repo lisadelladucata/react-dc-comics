@@ -1,39 +1,70 @@
+const headerLinks = [
+    {
+        id: 1,
+        text: 'CHARACTERS',
+        url: '#',
+    },
+    {
+        id: 2,
+        text: 'COMICS',
+        url: '#',
+    },
+    {
+        id: 3,
+        text: 'MOVIES',
+        url: '#',
+    },
+    {
+        id: 4,
+        text: 'TV',
+        url: '#',
+    },
+    {
+        id: 5,
+        text: 'GAMES',
+        url: '#',
+    },
+    {
+        id: 6,
+        text: 'COLLECTIBLES',
+        url: '#',
+    },
+    {
+        id: 7,
+        text: 'VIDEOS',
+        url: '#',
+    },
+    {
+        id: 8,
+        text: 'FANS',
+        url: '#',
+    },
+    {
+        id: 9,
+        text: 'NEWS',
+        url: '#',
+    },
+    {
+        id: 10,
+        text: 'SHOP',
+        url: '#',
+    },
 
+]
 export default function Header(){
     return <header className="container">
         <img src="./img/dc-logo.png" alt="" />
         <nav className="main-nav">
             <ul>
-                <li>
-                    <a href="#">CHARACTERS</a>
-                </li>
-                <li>
-                    <a href="#">COMICS</a>
-                </li>
-                <li>
-                    <a href="#">MOVIES</a>
-                </li>
-                <li>
-                    <a href="#">TV</a>
-                </li>
-                <li>
-                    <a href="#">GAMES</a>
-                </li>
-                <li>
-                    <a href="#">COLLECTIBLES</a>
-                </li>
-                <li>
-                    <a href="#">VIDEOS</a>
-                </li>
-                <li>
-                    <a href="#">FANS</a>
-                </li>
-                <li>
-                    <a href="#">NEWS</a>
-                </li>
-                <li>
-                    <a href="#">SHOP</a>
-                </li>
+                {
+                    headerLinks.map((headerLink) =>{
+                        return(
+                            <li key={headerLink.id}>
+                                <a href={headerLink.url}>{ headerLink.text}</a>
+                            </li>
+                        );
+                    })
+                }
             </ul>
         </nav>
         
