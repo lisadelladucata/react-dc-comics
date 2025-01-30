@@ -41,6 +41,11 @@ header{
     font-weight: bold;
 }
 
+.main-nav a:hover{
+    font-size: 15px;
+    color: #0282f9;
+}
+
 .main-nav a{
     text-decoration: none;
     color: #46464c;
@@ -64,6 +69,8 @@ MAIN
 .second-section{
     padding: 30px 0px;
     background-color: #0282f9 ;
+    position: sticky;
+    z-index: 100;
 }
 
 .second-section img{
@@ -87,15 +94,9 @@ MAIN
     background-size: cover;
 }
 
-.third-section h2{
+.third-section h3{
     color: white;
 } 
-
-.third-section div{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 
 .third-section a{
     text-decoration: none;
@@ -106,8 +107,52 @@ MAIN
     list-style: none;
 }
 
-.row{
-    max-width: 200px;
-    height: 70vh;
+.third-section .row{
     display: flex;
+    gap: 20px;
+}
+
+.third-section img{
+    position: absolute;
+    top:185px;
+    right: 155px;
+    z-index: 0;
+    width: 500px;
+}
+
+/*********
+FOOTER
+*********/
+footer{
+    background-color: #303030;
+    position: sticky;
+    z-index: 100;
+    padding: 20px;
+}
+
+footer .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+footer h3{
+    color: #0282f9;
+}
+
+.footer-btn{
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 2px #0282f9 solid;
+}
+
+.footer-btn:hover{
+    font-size: 15px;
 }

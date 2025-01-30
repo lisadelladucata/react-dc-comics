@@ -9,23 +9,23 @@ export default function Main(){
         </section>
         <section className="second-section">
             <div className="container">
-                <div>
+                <div className="col">
                     <img src="./img/buy-comics-digital-comics.png" alt="icon1" />
                     <a href="#">DIGITAL COMICS</a>
                 </div>
-                <div>
+                <div className="col">
                     <img src="./img/buy-comics-merchandise.png" alt="icon2" />
                     <a href="#">DC MERCHANDISE</a>
                 </div>
-                <div>
+                <div className="col">
                     <img src="./img/buy-comics-subscriptions.png" alt="icon3" />
                     <a href="#">SUBSCRIPTION</a>
                 </div>
-                <div>
+                <div className="col">
                     <img src="./img/buy-comics-shop-locator.png" alt="icon4" />
                     <a href="#">COMIC SHOP LOCATOR</a>
                 </div>
-                <div>
+                <div className="col">
                     <img src="./img/buy-dc-power-visa.svg" alt="icon5" />
                     <a href="#">DC POWER VISA</a>
                 </div>
@@ -33,8 +33,8 @@ export default function Main(){
         </section>
         <section className="third-section">
             <div className="container row">
-                <div>
-                    <h2>DC COMICS</h2>
+                <div className="col">
+                    <h3>DC COMICS</h3>
                     <ul>
                         <li>
                             <a href="#">Characters</a>
@@ -55,9 +55,7 @@ export default function Main(){
                             <a href="#">Videos</a>
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <h2>SHOP</h2>
+                    <h3>SHOP</h3>
                     <ul>
                         <li>
                             <a href="#">Shop DC</a>
@@ -67,8 +65,8 @@ export default function Main(){
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2>DC</h2>
+                <div className="col">
+                    <h3>DC</h3>
                     <ul>
                         <li>
                             <a href="#">Terms of use</a>
@@ -102,8 +100,8 @@ export default function Main(){
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Sites</h2>
+                <div className="col">
+                    <h3>Sites</h3>
                     <ul>
                         <li>
                             <a href="#">DC</a>
@@ -122,8 +120,9 @@ export default function Main(){
                         </li>
                     </ul>
                 </div>
-            <img src="./img/dc-logo-bg.png" alt="" />
-
+                <div className="row">
+                    <img src="./img/dc-logo-bg.png" alt="" />
+                </div>
             </div>
         </section>
     </main>

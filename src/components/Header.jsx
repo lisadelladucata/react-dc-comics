@@ -1,6 +1,7 @@
+
 export default function Header(){
     return <header className="container">
-        <img src="./img/dc-logo.png" alt="logo-header" />
+        <img src="./img/dc-logo.png" alt="" />
         <nav className="main-nav">
             <ul>
                 <li>
