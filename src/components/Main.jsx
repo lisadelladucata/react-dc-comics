@@ -1,4 +1,3 @@
-const content = '--> content goes here <--';
 const secondSectionLink = [
     {
         id: 1,
@@ -36,17 +35,12 @@ import mainMenù from "../data/mainMenù";
 
 export default function Main(){
     return <main>
-        <section className="first-section">
-            <div className="container">
-                {content}
-            </div>
-        </section>
-        <section className="second-section">
+        <section className="products-nav">
             <div className="container">
                 {
                     secondSectionLink.map((link) =>{
                         return(
-                            <div className="col">
+                            <div className="col" key={link.id}>
                                 <img src={link.src} alt="" />
                                 <a href={link.url}>{link.text}</a>
                             </div>
@@ -55,7 +49,7 @@ export default function Main(){
                 }
             </div>
         </section>
-        <section className="third-section">
+        <section className="main-nav">
             <div className="container row">
                 {
                     mainMenù.map((mainCol)=>{

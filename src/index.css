@@ -23,6 +23,12 @@ img{
     max-width: 100%;
 }
 
+.row{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 /*********
 HEADER
 *********/
@@ -33,7 +39,7 @@ header{
     padding: 20px 0px;
 }
 
-.main-nav ul{
+.header-nav ul{
     list-style: none;
     display: flex;
     gap: 30px;
@@ -41,12 +47,12 @@ header{
     font-weight: bold;
 }
 
-.main-nav a:hover{
+.header-nav a:hover{
     font-size: 15px;
     color: #0282f9;
 }
 
-.main-nav a{
+.header-nav a{
     text-decoration: none;
     color: #46464c;
 }
@@ -58,66 +64,97 @@ header img{
 /*********
 MAIN
 *********/
-.first-section{
+.hero{
     color: white;
-    background-color: #1c1c1c;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 30px;
+    background-image: url('/img/jumbotron.jpg');
+    background-size: cover;
+    padding: 150px;
 }
 
-.second-section{
+.comics-nav .col{
+    flex-grow: 1;
+    width: calc(100% / 7);
+}
+
+.comics-nav p{
+    font-weight: bold;
+    color: white;
+}
+
+.comics-nav{
+    background-color: #303030;
+    padding: 50px 0px 30px;
+}
+
+.current{
+    width: 15%;
+    background-color: #0282f9;
+    text-align: center;
+    padding: 1px;
+    position: relative;
+    top: 180px;
+    left: 0;
+}
+
+.comics-btn{
+    background-color: #0282f9 ;
+    padding: 10px 30px;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.comics-nav .row{
+    justify-content: center;
+}
+
+.products-nav{
     padding: 30px 0px;
     background-color: #0282f9 ;
     position: sticky;
     z-index: 100;
 }
 
-.second-section img{
+.products-nav img{
     width: 40px;
 }
 
-.second-section a{
+.products-nav a{
     text-decoration: none;
     color: white;
 }
 
-.second-section div{
+.products-nav div{
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
 }
 
-.third-section{
+.main-nav{
     background-image: url('./img/footer-bg.jpg');
     background-size: cover;
 }
 
-.third-section h3{
+.main-nav h3{
     color: white;
 } 
 
-.third-section a{
+.main-nav a{
     text-decoration: none;
     color: lightgray;
 }
 
-.third-section ul{
+.main-nav ul{
     list-style: none;
 }
 
-.third-section .row{
-    display: flex;
-    gap: 20px;
-}
-
-.third-section img{
+.main-nav img{
     position: absolute;
-    top:185px;
-    right: 155px;
+    top: 1350px;
+    right: 200px;
     z-index: 0;
-    width: 500px;
+    width: 450px;
 }
 
 /*********
@@ -131,7 +168,6 @@ footer{
 }
 
 footer .row{
-    display: flex;
     justify-content: space-between;
 }
 
